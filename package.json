@@ -1,0 +1,35 @@
+{
+  "name": "vanilla-ts-ssr",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server",
+    "build": "npm run build:client && npm run build:server",
+    "build:client": "vite build --ssrManifest --outDir dist/client",
+    "build:server": "vite build --ssr src/server.ts --outDir dist/server",
+    "preview": "cross-env NODE_ENV=production node server"
+  },
+  "dependencies": {
+    "@fontsource/material-symbols-rounded": "^5.1.0",
+    "@types/dompurify": "^3.0.5",
+    "@types/lodash": "^4.17.7",
+    "autoprefixer": "^10.4.20",
+    "compression": "^1.7.4",
+    "dompurify": "^3.1.6",
+    "express": "^4.19.2",
+    "lodash": "^4.17.21",
+    "postcss": "^8.4.47",
+    "sirv": "^2.0.4",
+    "tailwindcss": "^3.4.12",
+    "ts-node": "^10.9.2",
+    "vanilla-ts-ssr": "file:"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
+    "cross-env": "^7.0.3",
+    "typescript": "^5.4.5",
+    "vite": "^5.2.10"
+  }
+}
